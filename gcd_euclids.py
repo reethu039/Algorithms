@@ -13,6 +13,5 @@ def euclids_algo(num1, num2) :
 
 gcd = euclids_algo(num1, num2)
 
-
 print("GCD of {} and {} is {}".format(num1, num2, gcd))
 print("--- %s ---" % (time.time() - start))
