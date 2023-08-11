@@ -65,4 +65,4 @@ print("Final list of common primes = ", common_list)
 
 result = find_gcd(common_list)
 print("\nThe gcd of {} and {} is {}".format(num1, num2, result))
-print("--- %s seconds---" % (time.time() - start))
+print("--- %s milliseconds---" % ((time.time() - start)*1000))
