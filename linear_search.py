@@ -20,4 +20,4 @@ if(pos == -1) :
 else :
     print("Position of {} in array is {}".format(key, pos))
     
-print("--- %s seconds---" % ((time.time() - start)))
+print("--- %s milliseconds ---" % ((time.time() - start)*1000))
