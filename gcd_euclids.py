@@ -1,6 +1,7 @@
 # Python program to print the gcd of 2 given numbers using euclids algorithm
 import time
 start = time.time()
+
 num1 = int(input("Enter number 1 : "))
 num2 = int(input("Enter number 2 : "))
 

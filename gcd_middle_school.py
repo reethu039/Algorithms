@@ -3,7 +3,6 @@ import time
 start = time.time()
 def primeFactors(n):  
     primeFactorsArray = []
-    #print("n is : ",n)
     while(n % 2 == 0):
         primeFactorsArray.append(2)
         n = n / 2
