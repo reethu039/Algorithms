@@ -1,4 +1,5 @@
-#
+# Finding the occurences of each element of an array or a list. 
+
 def count_occurrences(inputArray):
     numOccurancesDict = {}
     
