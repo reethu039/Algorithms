@@ -15,10 +15,9 @@ def minimumCoins(coins, amt) :
     return minCount
 
 k = int(input("Enter the number of coin denominations : "))
-#coins = []
-coins = list(map(int, input("").split()))
-#for i in range(k) :
-#    coins.append(int(input("Enter the coin denominations : ")))
+coins = []
+for i in range(k) :
+    coins.append(int(input("Enter the coin denominations : ")))
 T = int(input("Enter the total amount: "))
 
 result = minimumCoins(coins, T)
