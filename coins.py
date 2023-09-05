@@ -18,7 +18,7 @@ k = int(input("Enter the number of coin denominations : "))
 coins = []
 for i in range(k) :
     coins.append(int(input("Enter the coin denominations : ")))
-T = int(input("Enter the total amount: "))
+T = int(input("Enter the total amount needed: "))
 
 result = minimumCoins(coins, T)
 print("The minimum number of coins needed is : {}".format(result))
