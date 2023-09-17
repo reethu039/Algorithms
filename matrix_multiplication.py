@@ -8,8 +8,9 @@ def multiply(matrix1, matrix2, matrixSizeRows1, matrixSizeColumns1, matrixSizeRo
             dot_product = 0
             for k in range(matrixSizeColumns1):
                 dot_product += matrix1[i][k] * matrix2[k][j]
-            countAdd +=1
-            countMultiply +=2
+                countMultiply +=1
+                countAdd +=1   
+            countAdd -= 1
             resultantRow.append(dot_product)
         resultantMatrix.append(resultantRow)
     for row in resultantMatrix:

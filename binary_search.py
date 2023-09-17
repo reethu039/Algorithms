@@ -10,19 +10,6 @@ for i in range(sizeOfArray) :
     array.append(i*2)
     i += 1
 print(array)
-
-def search1(low, high, mid, key, array) :
-    if(array[mid] == key) :
-        pos = mid
-        return pos
-    elif(array[mid] > key) :
-        low = mid + 1
-        mid = math.floor((low + high)/2)
-        search(low, high, mid, key, array)
-    elif(array[mid] < key) :
-        high = mid - 1
-        mid = math.floor((low + high)/2)
-        search(low, high, mid, key, array)
         
 def search(low, high, key, array):
     if low > high:
