@@ -31,5 +31,6 @@ def mergeSort(arr):
         merge(left,right,arr)
 
 arr = [12, 11, 13, 5, 6, 7]
+print("Given array is : ",arr)
 mergeSort(arr)
 print("Sorted array is : ", arr)
