@@ -3,8 +3,8 @@ def merge(left, right, arr):
     i = j = k = 0
     comp = 0
     while (i < len(left)) and (j < len(right)):
+        comp += 1
         if left[i] <= right[j]:
-            comp += 1
             arr[k] = left[i]
             i += 1
         else:

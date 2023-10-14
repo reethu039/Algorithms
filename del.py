@@ -36,7 +36,7 @@ for i in range(MatrixSizeRows2):
     row2 = list(map(int, input("").split()))
     matrix2.append(row2)
 
-if MatrixSizeColumns1 != MatrixSizeRows2:
+if MatrixSizeRows1 != MatrixSizeColumns2:
     print("-1")
 else:
     multiply(matrix1, matrix2, MatrixSizeRows1, MatrixSizeColumns1, MatrixSizeRows2, MatrixSizeColumns2)
