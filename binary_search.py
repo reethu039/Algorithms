@@ -1,34 +1,31 @@
-import time
 import math
+import time
 start = time.time()
-
-sizeOfArray = int(input("Enter size of the array : "))
-key = int(input("Enter the key to search for : "))
-array = []
-
-for i in range(sizeOfArray) :
-    array.append(i*2)
-    i += 1
-print(array)
         
-def search(low, high, key, array):
+def search(low, high, key, array, comp):
+    comp = comp+1
     if low > high:
-        return -1  # Key not found
+        result = [-1, comp] #key not found
+        return result
     mid = math.floor((low + high) / 2)
     if array[mid] == key:
-        return mid
+        result = [mid, comp]
+        return result
     elif array[mid] > key:
-        return search(low, mid - 1, key, array)
+        return search(low, mid - 1, key, array, comp)
     else:
-        return search(mid + 1, high, key, array)
+        return search(mid + 1, high, key, array, comp)
 
-low = 0
-high = sizeOfArray-1
-pos = search(low, high, key, array)
+sizeOfArray = int(input(""))
+if sizeOfArray==0:
+    print("-1")
+else:
+    array = list(map(int, input("").split()))
+    key = int(input(""))
+    low = comp = 0
+    high = sizeOfArray-1
+    result = search(low, high, key, array, comp)
+    print(result[1])
+    print(result[0])
 
-if(pos == -1) :
-    print("{} doesn't exist in array".format(key))
-else :
-    print("Position of {} in array is {}".format(key, pos))
-    
 print("--- %s milliseconds ---" % ((time.time() - start)*1000))
