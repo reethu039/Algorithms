@@ -4,36 +4,30 @@
 #include <stdlib.h>
 
 int main() {
-    int A[10][10];
-    int adj[10]={0,0,0,0,0,0,0,0,0,0};
+    int adj[10];
     int num=0, vertices=0, val1, val2;
+    int matrix[10][10];
     
     scanf("%d",&vertices);
     if(vertices==0){
         printf("-1");
         return 0;
-    } else if (vertices==1){
-        int temp;
-        scanf("%d",&temp);
-        printf("%d",temp);
+    } 
+    else if (vertices==1){
+        scanf("%d",&val1);
+        printf("%d",val1);
         return 0;
-    }
-    
-    for(int i=0; i<vertices; i++){
-        for(int j=0; j<vertices; j++) {
-            A[i][j]=0;
-        }
     }
     
     while(1){
         if((scanf("%d%d",&val1,&val2))!=2){
             break;
         }
-        A[val1-1][val2-1]=1;
+        matrix[val1-1][val2-1]=1;
     }
     
     for(int i=0; i<vertices; i++){
-        if(A[val1-1][i]==1){
+        if(matrix[val1-1][i]==1){
             adj[num]=i+1;
             num++;
         }
@@ -44,6 +38,5 @@ int main() {
         printf("%d,",adj[i]);
     }
     printf("%d",adj[num-1]);
-    
     
 }
