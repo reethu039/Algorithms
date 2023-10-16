@@ -9,7 +9,7 @@ int main() {
     
     scanf("%d",&vertices);
     if(vertices==0){
-        printf("0");
+        printf("-1");
         return 0;
     } 
     else if (vertices==1){
@@ -27,16 +27,15 @@ int main() {
         }
     }
     
-    int num=0;
-    while(num<vertices)
-    {
-        scanf(" %c %c",&val1,&val2);
-        matrix[val1-'A'][val2-'A']=1;
-        num++;
+    while(!feof(stdin)) {
+         if (scanf(" %c %c", &val1, &val2) != 2) {
+            break; // Terminate input if no more input is available
+        }
+        matrix[val1 - 'A'][val2 - 'A'] = 1;
     }
     
     for(int i=0; i<vertices; i++){
-        num=0;
+        int num=0;
         for(int j=0; j<vertices; j++) {
             if(matrix[j][i]==1){
                 num++;
