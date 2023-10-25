@@ -9,7 +9,7 @@ def insertionSort(size, arr):
             if j==0:
                 comp -=1
             comp += 1
-            arr[j+1] = arr [j]
+            arr[j+1] = arr[j]
             swap += 1
             j-=1
         arr[j+1] = temp
