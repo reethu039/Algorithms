@@ -1,4 +1,4 @@
-##Design and Analysis of Algorithms (DAA) Code Repository
+# Design and Analysis of Algorithms (DAA) Code Repository
 
 Welcome to the Design and Analysis of Algorithms (DAA) code repository! 
 This repository contains a collection of code implementations for various data structures and algorithms. 
