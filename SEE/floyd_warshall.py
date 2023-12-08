@@ -1,9 +1,4 @@
-def floyd_warshall(vertices, edges):
-    graph = [[9999] * vertices for i in range(vertices)]
-    
-    for edge in edges:
-        source, dest, weight = edge
-        graph[source - 1][dest - 1] = weight
+def floyd_warshall(graph, vertices):
 
     for k in range(vertices):
         for i in range(vertices):
@@ -17,17 +12,15 @@ def floyd_warshall(vertices, edges):
 
 
 vertices = int(input(""))
-edges_count = int(input(""))
+edges = int(input(""))
 
-if edges_count == 0:
-    print(-1)
-    exit(0)
-edges = []
-if edges_count==1:
-    edge = int(input(""))
-    edges.append(edge)
+if edges != 0:
+    graph = [([9999] * vertices) for i in range(vertices)]
+    
+    for i in range(edges):
+        source, dest, weight = map(int, input().split())
+        graph[source - 1][dest - 1] = weight
+    floyd_warshall(graph, vertices)
+    
 else:
-    for i in range(edges_count):
-        edge = list(map(int, input().split()))
-        edges.append(edge)
-    floyd_warshall(vertices, edges)
+    print(-1)
